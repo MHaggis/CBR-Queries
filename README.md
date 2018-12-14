@@ -9,6 +9,15 @@ Most recent queries may be found below.
 * [helpers](helpers.md)
 
 
+### Emotet
+
+    is_executable_image:"true"  digsig_result:"Unsigned" observed_filename:c:\programdata\
+
+<br>
+
+    is_executable_image:"true"  digsig_result:"Unsigned" observed_filename:\appdata\roaming\
+
+
 ### dfsvc/browser broker queries
 
     parent_name:browser_broker.exe process_name:mshta.exe
