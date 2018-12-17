@@ -8,7 +8,7 @@ Most recent queries may be found below.
 * [mimikatz](mimikatz.md)
 * [helpers](helpers.md)
 
-### Coin Miner 
+### Coin Miner
 
     digsig_result:"Unsigned" company_name:"Zhuhai Kingsoft Office Software Co.,Ltd"
 
@@ -68,19 +68,14 @@ https://github.com/fireice-uk/xmr-stak
 
     is_executable_image:"true"  digsig_result:"Unsigned" observed_filename:\appdata\roaming\
 
+<br>
 
-### dfsvc/browser broker queries
-
-    parent_name:browser_broker.exe process_name:mshta.exe
+    is_executable_image:"true"  digsig_result:"Unsigned" observed_filename:C:\Windows\SysWOW64\
 
 <br>
 
-    parent_name:browser_broker.exe process_name:rundll32.exe
+    is_executable_image:"true"  digsig_result:"Unsigned" observed_filename:C:\Windows\system32\
 
 <br>
 
-    process_name:dfsvc.exe digsig_result_child:"Unsigned" OR digsig_result_child:"Untrusted Root"
-
-<br>
-
-    process_name:rundll32.exe childproc_name:dfsvc.exe
+    is_executable_image:"true"  digsig_result:"Unsigned" observed_filename:C:\Windows\

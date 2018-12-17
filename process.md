@@ -1,5 +1,22 @@
 ### Process Search
 
+### dfsvc/browser broker queries
+
+    parent_name:browser_broker.exe process_name:mshta.exe
+
+<br>
+
+    parent_name:browser_broker.exe process_name:rundll32.exe
+
+<br>
+
+    process_name:dfsvc.exe digsig_result_child:"Unsigned" OR digsig_result_child:"Untrusted Root"
+
+<br>
+
+    process_name:rundll32.exe childproc_name:dfsvc.exe
+
+<br>
 
     is_executable_image_filewrite:True -path:google\chrome\* and -path:google\update\* -digsig_result_filewrite:Signed filemod:local\settings\* filemod:appdata\local\temp\*
 
