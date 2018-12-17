@@ -8,6 +8,57 @@ Most recent queries may be found below.
 * [mimikatz](mimikatz.md)
 * [helpers](helpers.md)
 
+### Coin Miner 
+
+    digsig_result:"Unsigned" company_name:"Zhuhai Kingsoft Office Software Co.,Ltd"
+
+<br>
+
+    parent_name:lsass.exe process_name:cmd.exe childproc_name:reg.exe
+
+<br>
+
+    parent_name:lsass.exe process_name:cmd.exe childproc_name:schtasks.exe
+
+<br>
+
+    process_name:net1.exe cmdline:"net1 user IISUSER_ACCOUNTXX /del"
+
+<br>
+
+    process_name:lsass.exe digsig_result_filewrite:"Unsigned"
+
+<br>
+
+    company_name:"TODO: <公司名>"
+
+<br>
+
+    parent_name:conhost.exe digsig_result_parent:"Unsigned"
+
+
+https://github.com/fireice-uk/xmr-stak
+
+<br>
+
+    filemod:xmrstak_opencl_backend.dll
+
+<br>
+
+    filemod:xmrstak_cuda_backend.dll
+
+<br>
+
+    observed_filename:c:\windows\debug\
+
+<br>
+
+    observed_filename:c:\windows\inf\
+
+<br>
+
+    observed_filename:c:\windows\web\
+
 
 ### Emotet
 
