@@ -8,6 +8,11 @@ Most recent queries may be found below.
 * [mimikatz](mimikatz.md)
 * [helpers](helpers.md)
 
+### Process
+
+    crossproc_type:"remotethread" AND -process_name:wmiprvse.exe -process_name:svchost.exe -process_name:csrss.exe
+
+
 ### Coin Miner
 
     digsig_result:"Unsigned" company_name:"Zhuhai Kingsoft Office Software Co.,Ltd"
@@ -60,7 +65,15 @@ https://github.com/fireice-uk/xmr-stak
     observed_filename:c:\windows\web\
 
 
-### Emotet
+### Emotet / qakbot
+
+    digsig_publisher:"Evaila IT Ltd"
+
+<br>
+
+    process_name:wmiprvse.exe modload:c:\windows\temp\* digsig_result_modload:Unsigned
+
+<br>
 
     is_executable_image:"true"  digsig_result:"Unsigned" observed_filename:c:\programdata\
 
@@ -79,3 +92,7 @@ https://github.com/fireice-uk/xmr-stak
 <br>
 
     is_executable_image:"true"  digsig_result:"Unsigned" observed_filename:C:\Windows\
+
+<br>
+
+    is_executable_image:"true"  digsig_result:"Unsigned" observed_filename:C:\Windows\temp
