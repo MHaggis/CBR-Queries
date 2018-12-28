@@ -1,5 +1,42 @@
 ## Emotet
 
+
+    digsig_publisher:"Evaila IT Ltd"
+
+<br>
+
+    process_name:wmiprvse.exe modload:c:\windows\temp\* digsig_result_modload:Unsigned
+
+<br>
+
+    is_executable_image:"true"  digsig_result:"Unsigned" observed_filename:c:\programdata\
+
+<br>
+
+    is_executable_image:"true"  digsig_result:"Unsigned" observed_filename:\appdata\roaming\
+
+<br>
+
+    is_executable_image:"true" digsig_result:Unsigned observed_filename:\AppData\Roaming\Microsoft\
+
+<br>
+
+    is_executable_image:"true"  digsig_result:"Unsigned" observed_filename:C:\Windows\SysWOW64\
+
+<br>
+
+    is_executable_image:"true"  digsig_result:"Unsigned" observed_filename:C:\Windows\system32\
+
+<br>
+
+    is_executable_image:"true"  digsig_result:"Unsigned" observed_filename:C:\Windows\
+
+<br>
+
+    is_executable_image:"true"  digsig_result:"Unsigned" observed_filename:C:\Windows\temp
+
+<br>
+
     -parent_name:perccli64.exe -parent_name:kix32.exe -parent_name:activrelay.exe digsig_result_parent:"Unsigned"
 
 <br>
