@@ -5,6 +5,11 @@
 
 <br>
 
+    disig_issuer:"COMODO RSA Code Signing CA"
+
+
+<br>
+
     process_name:wmiprvse.exe modload:c:\windows\temp\* digsig_result_modload:Unsigned
 
 <br>
