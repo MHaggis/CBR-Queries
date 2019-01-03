@@ -20,6 +20,8 @@
 
     is_executable_image_filewrite:True -path:google\chrome\* and -path:google\update\* -digsig_result_filewrite:Signed filemod:local\settings\* filemod:appdata\local\temp\*
 
+##
+
 <br>
 
     process_name:lsass.exe digsig_result_filewrite:"Unsigned"
@@ -241,53 +243,53 @@
 
     process_name:svchost.exe AND cmdline:"-k netsvcs -p -s gpsvc" AND domain:* AND -host_type:"domain_controller"
 
-    ### Coin Miner
+### Coin Miner
 
-        digsig_result:"Unsigned" company_name:"Zhuhai Kingsoft Office Software Co.,Ltd"
+    digsig_result:"Unsigned" company_name:"Zhuhai Kingsoft Office Software Co.,Ltd"
 
-    <br>
+<br>
 
-        parent_name:lsass.exe process_name:cmd.exe childproc_name:reg.exe
+    parent_name:lsass.exe process_name:cmd.exe childproc_name:reg.exe
 
-    <br>
+<br>
 
-        parent_name:lsass.exe process_name:cmd.exe childproc_name:schtasks.exe
+    parent_name:lsass.exe process_name:cmd.exe childproc_name:schtasks.exe
 
-    <br>
+<br>
 
-        process_name:net1.exe cmdline:"net1 user IISUSER_ACCOUNTXX /del"
+    process_name:net1.exe cmdline:"net1 user IISUSER_ACCOUNTXX /del"
 
-    <br>
+<br>
 
-        process_name:lsass.exe digsig_result_filewrite:"Unsigned"
+    process_name:lsass.exe digsig_result_filewrite:"Unsigned"
 
-    <br>
+<br>
 
-        company_name:"TODO: <公司名>"
+    company_name:"TODO: <公司名>"
 
-    <br>
+<br>
 
-        parent_name:conhost.exe digsig_result_parent:"Unsigned"
+    parent_name:conhost.exe digsig_result_parent:"Unsigned"
 
 
-    https://github.com/fireice-uk/xmr-stak
+https://github.com/fireice-uk/xmr-stak
 
-    <br>
+<br>
 
-        filemod:xmrstak_opencl_backend.dll
+    filemod:xmrstak_opencl_backend.dll
 
-    <br>
+<br>
 
-        filemod:xmrstak_cuda_backend.dll
+    filemod:xmrstak_cuda_backend.dll
 
-    <br>
+<br>
 
-        observed_filename:c:\windows\debug\
+    observed_filename:c:\windows\debug\
 
-    <br>
+<br>
 
-        observed_filename:c:\windows\inf\
+    observed_filename:c:\windows\inf\
 
-    <br>
+<br>
 
-        observed_filename:c:\windows\web\
+    observed_filename:c:\windows\web\
