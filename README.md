@@ -8,6 +8,30 @@
 
 Most recently added queries below.
 
+### Domain Enumeration
+
+https://github.com/clr2of8/DPAT
+
+    process_name:ntdsutil.exe
+
+<br>
+
+    process_name:dcdiag.exe
+
+<br>
+
+    process_name:repadmin.exe
+
+<br>
+
+
+    process_name:netdom.exe
+
+<br>
+
+
+    company_name:"http://www.joeware.net"
+
 
 ### EternalBlue - Miner
 

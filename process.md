@@ -1,5 +1,12 @@
 ### Process Search
 
+
+### klist
+
+[Reference](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/klist)
+
+    process_name:klist.exe
+
 ### dfsvc/browser broker queries
 
     parent_name:browser_broker.exe process_name:mshta.exe
