@@ -8,6 +8,28 @@
 
 Most recently added queries below.
 
+### Emotet stuff
+
+    parent_name:userinit.exe digsig_result_process:Unsigned
+
+### Something new
+
+    parent_name:powershell.exe process_name:csc.exe
+
+
+### Some stuff here
+
+
+[reference](https://ti.360.net/blog/articles/latest-target-attack-of-darkhydruns-group-against-middle-east-en/)
+
+    parent_name:powershell.exe process_name:nslookup.exe
+
+### csc spawns
+
+(process_name:excel.exe OR process_name:winword.exe OR process_name:outlook.exe) childproc_name:csc.exe
+
+(process_name:excel.exe OR process_name:winword.exe OR process_name:outlook.exe) filemod:.cs
+
 ### Domain Enumeration
 
 https://github.com/clr2of8/DPAT
