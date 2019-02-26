@@ -1,6 +1,6 @@
-## Emotet
+## Malware
 
-Not 100% these are emotet. It's highly possible Ryuk and Trickbot are mixed in here.
+Not 100% these are emotet. It's highly possible Ryuk, Qakbot and Trickbot are mixed in here.
 
     digsig_publisher:"Evaila IT Ltd"
 

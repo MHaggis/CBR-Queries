@@ -2,7 +2,7 @@
 
 * [Binary](binary.md)
 * [Process](process.md)
-* [emotet](emotet.md)
+* [malware](emotet.md)
 * [mimikatz](mimikatz.md)
 * [helpers](helpers.md)
 
@@ -11,6 +11,8 @@ Most recently added queries below.
 ### Qakbot/Emotet/malware?
 
 Binary:
+
+`digsig_publisher:"RMBMS Limited"`
 
 `is_executable_image:"true" digsig_result:Unsigned observed_filename:\AppData\Roaming\Microsoft\`
 
