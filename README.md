@@ -14,6 +14,8 @@ Binary:
 
 `digsig_publisher:"RMBMS Limited"`
 
+`digsig_publisher:"PROVERA LIMITED"`
+
 `is_executable_image:"true" digsig_result:Unsigned observed_filename:\AppData\Roaming\Microsoft\`
 
 `digsig_publisher:"Skotari Limited"`
