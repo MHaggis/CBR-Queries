@@ -8,6 +8,38 @@
 
 Most recently added queries below.
 
+###
+
+`process_name:explorer.exe filemod:temp1_*.zip filemod:request*.doc`
+
+`process_name:winword.exe cmdline:request*.doc\"`
+
+`process_name:explorer.exe filemod:temp1_*.zip filemod:request*.doc`
+
+###
+
+`process_name:mode.com`
+
+`digsig_result_parent:Unsigned process_name:raserver.exe`
+
+
+
+### scrobj load and behavior
+
+`process_name:regsvr32.exe (modload:scrobj.dll) AND childproc_name:powershell.exe`
+
+`parent_name:powershell.exe AND process_name:nslookup.exe AND netconn_count:[1 TO *]`
+
+### Java Embedded MSI files
+`process_name:java.exe cmdline:-classpath parent_name:javaw.exe (childproc_name:java.exe or childproc_name:conhost.exe)`
+
+`process_name:java.exe cmdline:-classpath parent_name:javaw.exe (childproc_name:java.exe or childproc_name:conhost.exe) filemod:appdata\local\temp\*.class`
+
+[API](https://github.com/cparmn/CarbonBlackResponse/blob/master/msijar.py)
+
+
+
+
 ### Qakbot/Emotet/malware?
 
 Binary:
