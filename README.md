@@ -42,7 +42,20 @@ Most recently added queries below.
 
 ### Qakbot/Emotet/malware?
 
+`process_name:explorer.exe filemod:.wpq`
+`process_name:explorer.exe filemod:.wpl`
+`process_name:explorer.exe filemod:.dll`
+`process_name:explorer.exe filemod:.dat`
+
+`process_name:explorer.exe filemod:bot_serv[1]`
+`process_name:explorer.exe filemod:t3[1]`
+
+
+`process_name:schtasks.exe (cmdline:powershell.exe OR cmdline:$windowsupdate OR cmdline:.wpq OR cmdline:.wpl)`
+
 Binary:
+
+`company_name:"Borland Corporation"`
 
 `digsig_publisher:"RMBMS Limited"`
 
