@@ -41,7 +41,7 @@
 
 <br>
 
-    process_name:ntoskrnl.exe (digsig_result_modload:“Unsigned” OR digsig_result_modload:"Explicit Distrust")
+    process_name:ntoskrnl.exe (digsig_result_modload:"Unsigned" OR digsig_result_modload:"Explicit\ Distrust")
 
 ### Random
 
