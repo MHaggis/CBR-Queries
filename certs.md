@@ -9,3 +9,9 @@ https://acmccs.github.io/papers/p1435-kimA.pdf
 digsig_issuer:"WoSign Class 3 Code Signing CA"
 
 digsig_issuer:"WoSign Class 3 Code Signing CA" company_name:"Microsoft Corporation"
+
+digsig_issuer:"WoTrus Code Signing CA"
+
+digsig_issuer:"VeriSign Class 3 Code Signing 2010 CA"
+
+digsig_subject:"CHENGDU YIWO Tech Development Co., Ltd."

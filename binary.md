@@ -43,6 +43,12 @@
 
     process_name:ntoskrnl.exe (digsig_result_modload:"Unsigned" OR digsig_result_modload:"Explicit\ Distrust")
 
+<br>
+
+    process_name:spoolsv.exe -digsig_result_modload:Signed
+
+<br>
+
 ### Random
 
     company_name:“RW-Everything”

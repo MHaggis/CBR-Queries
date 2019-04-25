@@ -11,6 +11,10 @@ Most recently added queries below.
 
 ###
 
+`process_name:svchost.exe cmdline:RemoteRegistry`
+
+###
+
 `process_name:explorer.exe filemod:temp1_*.zip filemod:request*.doc`
 
 `process_name:winword.exe cmdline:request*.doc\"`
