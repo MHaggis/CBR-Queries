@@ -14,6 +14,11 @@
 
     is_executable_image:"true"  digsig_result:"Unsigned" observed_filename:c:\windows\syswow64
 
+<br>
+
+    (observed_filename:"c:\windows\system32\" OR observed_filename:"c:\windows\syswow64\") is_executable_image:"true" digsig_result:"Unsigned"
+
+
 
 ### Driver research
 

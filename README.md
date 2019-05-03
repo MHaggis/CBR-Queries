@@ -9,6 +9,22 @@
 
 Most recently added queries below.
 
+### OrangeWorm
+
+`process_name:rundll32.exe cmdline:ControlTrace AND childproc_count:[2 TO *] AND regmod_count:[1 TO *]`
+
+`company_name:"Indiana Software Foundation"`
+
+`(observed_filename:"c:\windows\system32\" OR observed_filename:"c:\windows\syswow64\") is_executable_image:"true" digsig_result:"Unsigned"`
+
+
+
+### DLL Hijack
+
+c:\windows\system32\wbem\
+
+`filemod:"wbem\loadperf.dll" OR filemod:"wbem\bcrypt.dll"`
+
 ###
 
 `process_name:svchost.exe cmdline:RemoteRegistry`
