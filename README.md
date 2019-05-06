@@ -9,6 +9,10 @@
 
 Most recently added queries below.
 
+###
+
+`digsig_result_parent:Unsigned process_name:svchost.exe`
+
 ### OrangeWorm
 
 `process_name:rundll32.exe cmdline:ControlTrace AND childproc_count:[2 TO *] AND regmod_count:[1 TO *]`
