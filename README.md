@@ -11,7 +11,7 @@ Most recently added queries below.
 
 ###
 
-`digsig_result_parent:Unsigned process_name:svchost.exe`
+`-digsig_result_parent:Signed process_name:svchost.exe`
 
 ### OrangeWorm
 
