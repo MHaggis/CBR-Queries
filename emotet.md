@@ -2,6 +2,61 @@
 
 Not 100% these are emotet. It's highly possible Ryuk, Qakbot and Trickbot are mixed in here.
 
+### OrangeWorm
+
+`process_name:rundll32.exe cmdline:ControlTrace AND childproc_count:[2 TO *] AND regmod_count:[1 TO *]`
+
+`company_name:"Indiana Software Foundation"`
+
+`(observed_filename:"c:\windows\system32\" OR observed_filename:"c:\windows\syswow64\") is_executable_image:"true" digsig_result:"Unsigned"`
+
+### Qakbot/Emotet/malware?
+
+`process_name:explorer.exe filemod:.wpq`
+`process_name:explorer.exe filemod:.wpl`
+`process_name:explorer.exe filemod:.dll`
+`process_name:explorer.exe filemod:.dat`
+
+`process_name:explorer.exe filemod:bot_serv[1]`
+`process_name:explorer.exe filemod:t3[1]`
+
+
+`process_name:schtasks.exe (cmdline:powershell.exe OR cmdline:$windowsupdate OR cmdline:.wpq OR cmdline:.wpl)`
+
+
+`company_name:"Borland Corporation"`
+
+`digsig_publisher:"RMBMS Limited"`
+
+`digsig_publisher:"PROVERA LIMITED"`
+
+`is_executable_image:"true" digsig_result:Unsigned observed_filename:\AppData\Roaming\Microsoft\`
+
+`digsig_publisher:"Skotari Limited"`
+
+`digsig_issuer:"Sectigo RSA Code Signing CA"`
+
+`digsig_issuer:"COMODO RSA Code Signing CA"`
+
+`digsig_subject:"Skotari Limited"`
+
+`digsig_publisher:"IMRAN IT SERVICES LTD"`
+
+
+
+```is_executable_image:"true"  digsig_result:"Unsigned" observed_filename:c$```
+
+```is_executable_image:"true"  digsig_result:"Unsigned" observed_filename:admin$```
+
+```is_executable_image:"true"  digsig_result:"Unsigned"```
+
+```is_executable_image:"true"  digsig_result:"Signed"```
+
+`cmdline:$windowsupdate*`
+
+`process_name:schtasks.exe cmdline:WEEKLY`
+
+
     digsig_publisher:"Evaila IT Ltd"
 
 <br>

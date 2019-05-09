@@ -1,5 +1,71 @@
 ### Process Search
 
+###
+
+`process_name:explorer.exe AND netconn_count:[500 TO *]`
+
+`process_name:explorer.exe (modload:"c:\windows\syswow64\taskschd.dll")`
+
+
+### Behavior
+
+`-digsig_result_filemod:Signed process_name:rundll32.exe`
+
+`process_name:cacls.exe cmdline:\startup\`
+
+###
+
+`-digsig_result_parent:Signed process_name:svchost.exe`
+
+### DLL Hijack
+
+c:\windows\system32\wbem\
+
+`filemod:"wbem\loadperf.dll" OR filemod:"wbem\bcrypt.dll"`
+
+###
+
+`process_name:svchost.exe cmdline:RemoteRegistry`
+
+###
+
+`process_name:explorer.exe filemod:temp1_*.zip filemod:request*.doc`
+
+`process_name:winword.exe cmdline:request*.doc\"`
+
+`process_name:explorer.exe filemod:temp1_*.zip filemod:request*.doc`
+
+###
+
+`process_name:mode.com`
+
+`digsig_result_parent:Unsigned process_name:raserver.exe`
+
+
+### scrobj load and behavior
+
+`process_name:regsvr32.exe (modload:scrobj.dll) AND childproc_name:powershell.exe`
+
+`parent_name:powershell.exe AND process_name:nslookup.exe AND netconn_count:[1 TO *]`
+
+### Java Embedded MSI files
+`process_name:java.exe cmdline:-classpath parent_name:javaw.exe (childproc_name:java.exe or childproc_name:conhost.exe)`
+
+`process_name:java.exe cmdline:-classpath parent_name:javaw.exe (childproc_name:java.exe or childproc_name:conhost.exe) filemod:appdata\local\temp\*.class`
+
+[API](https://github.com/cparmn/CarbonBlackResponse/blob/master/msijar.py)
+
+
+### uacbypass
+
+[Reference](https://enigma0x3.net/2016/08/15/fileless-uac-bypass-using-eventvwr-exe-and-registry-hijacking/)
+
+    regmod:"mscfile\shell\open\command"
+
+<br>
+
+    parent_name:powershell.exe process_name:eventvwr.exe
+
 ### PPID Spoofing - Explorer CLSID
 
     process_name:rundll32.exe cmdline:Shell32.dll*  cmdline:SHCreateLocalServerRunDll cmdline:{c08afd90-f2a1-11d1-8455-00a0c91f3880}
