@@ -11,6 +11,20 @@ Most recently added queries below.
 
 ###
 
+`process_name:explorer.exe AND netconn_count:[500 TO *]`
+
+`process_name:explorer.exe (modload:"c:\windows\syswow64\taskschd.dll")`
+
+
+
+### Behavior
+
+`-digsig_result_filemod:Signed process_name:rundll32.exe`
+
+`process_name:cacls.exe cmdline:\startup\`
+
+###
+
 `-digsig_result_parent:Signed process_name:svchost.exe`
 
 ### OrangeWorm
