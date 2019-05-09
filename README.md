@@ -16,7 +16,6 @@ Most recently added queries below.
 `process_name:explorer.exe (modload:"c:\windows\syswow64\taskschd.dll")`
 
 
-
 ### Behavior
 
 `-digsig_result_filemod:Signed process_name:rundll32.exe`
