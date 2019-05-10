@@ -9,7 +9,7 @@ Get started with our simple Install script:
 
 ``powershell.exe "IEX (New-Object Net.WebClient).DownloadString('http://psInstall.AtomicRedTeam.com')"``
 
-`Source <https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/execution-frameworks/Invoke-AtomicRedTeam/Install-AtomicRedTeam.ps1>`_ `Source`_
+`Source <https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/execution-frameworks/Invoke-AtomicRedTeam/Install-AtomicRedTeam.ps1>`_
 
 By default, it will download and Install Atomic Red Team to ``c:\AtomicRedTeam``
 
