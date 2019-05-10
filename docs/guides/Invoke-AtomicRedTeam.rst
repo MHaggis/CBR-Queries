@@ -59,21 +59,30 @@ ___________________
 This process generates all Atomic tests and allows for easy copy and paste execution.
 Note: you may need to change the path.
 
-    ``Invoke-AllAtomicTests -GenerateOnly``
+.. code-block:: console
+
+    > powershell
+    > Invoke-AllAtomicTests -GenerateOnly
 
 Execute All Tests
 ___________________
 
 Execute all Atomic tests:
 
-    ``Invoke-AllAtomicTests``
+.. code-block:: console
+
+    > powershell
+    > Invoke-AllAtomicTests
 
 Execute All Tests - Specific Directory
 ___________________
 
 Specify a path to atomics folder, example C:\AtomicRedTeam\atomics
 
-    ``Invoke-AllAtomicTests -path C:\AtomicRedTeam\atomics``
+.. code-block:: console
+
+    > powershell
+    >Invoke-AllAtomicTests -path C:\AtomicRedTeam\atomics
 
 Execute a Single Test
 ___________________
