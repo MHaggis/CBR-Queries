@@ -2,7 +2,7 @@
 Invoke-AtomicRedTeam
 ======================================
 
-Getting Started
+Get Started
 ^^^^^^^^^
 
 The EQL library current supports Python 2.7 and 3.5 - 3.7. Assuming a supported Python version is installed, run the command:
