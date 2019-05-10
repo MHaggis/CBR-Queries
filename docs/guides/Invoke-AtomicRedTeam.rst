@@ -69,6 +69,7 @@ Execute a Single Test
 ___________________
 
 .. code-block:: console
+
     > powershell
     > $T1117 = Get-AtomicTechnique -Path ..\..\atomics\T1117\T1117.yaml
     > Invoke-AtomicTest $T1117
