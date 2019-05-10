@@ -33,14 +33,14 @@ Verbose
 Manual Installation
 ___________________
 
-``set-executionpolicy Unrestricted``
+    ``set-executionpolicy Unrestricted``
 
 [PowerShell-Yaml](https://github.com/cloudbase/powershell-yaml) is required to parse Atomic yaml files:
 
 
-``Install-Module -Name powershell-yaml``
+    ``Install-Module -Name powershell-yaml``
 
-```Import-Module .\Invoke-AtomicRedTeam.psm1``
+    ``Import-Module .\Invoke-AtomicRedTeam.psm1``
 
 
 Generate Tests
@@ -68,9 +68,11 @@ Specify a path to atomics folder, example C:\AtomicRedTeam\atomics
 Execute a Single Test
 ___________________
 
-::powershell
-$T1117 = Get-AtomicTechnique -Path ..\..\atomics\T1117\T1117.yaml
-Invoke-AtomicTest $T1117
+.. code-block:: console
+    > powershell
+    > $T1117 = Get-AtomicTechnique -Path ..\..\atomics\T1117\T1117.yaml
+    > Invoke-AtomicTest $T1117
+
 
 Additional Examples
 ___________________
