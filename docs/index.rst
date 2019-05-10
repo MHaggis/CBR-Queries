@@ -4,11 +4,7 @@
 Atomic Red Team
 ========================
 
-.. image:: _static/eql-whoami.jpg
-    :alt: what is eql
-    :scale: 50%
-
-    Our Atomic Red Team tests are small, highly portable detection tests mapped to the MITRE ATT&CK Framework. Each test is designed to map back to a particular tactic. This gives defenders a highly actionable way to immediately start testing their defenses against a broad spectrum of attacks.
+**Atomic Red Team** tests are small, highly portable detection tests mapped to the MITRE ATT&CK Framework. Each test is designed to map back to a particular tactic. This gives defenders a highly actionable way to immediately start testing their defenses against a broad spectrum of attacks.
 
 Resources
 ^^^^^^^^^
