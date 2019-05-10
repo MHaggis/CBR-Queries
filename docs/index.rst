@@ -23,8 +23,8 @@ Resources
    :caption: Contents
 
    guides/index
-   analytics
-   atomicblue
+   guides/related
+   guides/invoke-atomicredteam
 
    matrices
    schemas

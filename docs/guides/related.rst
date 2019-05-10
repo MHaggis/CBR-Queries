@@ -8,6 +8,8 @@ Projects and resources related to Atomic Red Team
 
 * `SCYTHE Goes Atomic <https://blog.grimm-co.com/post/scythe-goes-atomic/>`_
 
+* `SOC Prime Threat Detection Marketplace <https://socprime.com/en/news/threat-detection-marketplace-3-5-2-is-released/>`_
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents
