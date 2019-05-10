@@ -9,7 +9,7 @@ Get started with our simple Install script:
 
 ``powershell.exe "IEX (New-Object Net.WebClient).DownloadString('http://psInstall.AtomicRedTeam.com')"``
 
-.. _Link: https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/execution-frameworks/Invoke-AtomicRedTeam/Install-AtomicRedTeam.ps1/Link_(Source)
+## FIX .. _Link: https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/execution-frameworks/Invoke-AtomicRedTeam/Install-AtomicRedTeam.ps1/Link_(Source)
 
 By default, it will download and Install Atomic Red Team to ``c:\AtomicRedTeam``
 
@@ -80,76 +80,57 @@ ___________________
 
 If you would like output when running tests using the following:
 
-#### Informational Stream
+Informational Stream
+___________________
 
-```powershell
-Invoke-AtomicTest $T1117 -InformationAction Continue
-```
+.. code-block:: console
 
-#### Verbose Stream
+    > powershell
+    > Invoke-AtomicTest $T1117 -InformationAction Continue
 
-```powershell
-Invoke-AtomicTest $T1117 -Verbose
-```
+Verbose Stream
+___________________
 
-#### Debug Stream
+.. code-block:: console
 
-```powershell
-Invoke-AtomicTest $T1117 -Debug
-```
+    > powershell
+    > Invoke-AtomicTest $T1117 -Verbose
 
-#### WhatIf
+Debug Stream
+___________________
+
+.. code-block:: console
+
+    > powershell
+    > Invoke-AtomicTest $T1117 -Debug
+
+WhatIf
+___________________
 
 If you would like to see what would happen without running the test
 
-```powershell
-Invoke-AtomicTest $T1117 -WhatIf
-```
+.. code-block:: console
 
-#### Confirm
+    > powershell
+    > Invoke-AtomicTest $T1117 -WhatIf
+
+Confirm
+___________________
 
 To run all tests without confirming them run using the Confirm switch to false
 
-```powershell
-Invoke-AtomicTest $T1117 -Confirm:$false
-```
+.. code-block:: console
+
+    > powershell
+    > Invoke-AtomicTest $T1117 -Confirm:$false
 
 Or you can set your `$ConfirmPreference` to 'Medium'
 
-```powershell
-$ConfirmPreference = 'Medium'
-Invoke-AtomicTest $T1117
-```
-
-
-
-
-
-
-The EQL library current supports Python 2.7 and 3.5 - 3.7. Assuming a supported Python version is installed, run the command:
-
 .. code-block:: console
 
-    $ git clone https://github.com/endgameinc/eqllib
-    $ cd eqllib
-    $ python setup.py install
-
-If Python is configured and already in the PATH, then ``eqllib`` will be readily available, and can be checked by running the command:
-
-.. code-block:: console
-
-    $ eqllib -h
-    usage: eqllib [-h] {convert-query,convert-data,query,survey} ...
-
-    EQL Analytics
-
-    positional arguments:
-      {convert-query,convert-data,query,survey}
-                            Sub Command Help
-        convert-query       Convert a query to specific data source
-        convert-data        Convert data from a specific data source
-        query               Query over a data source
-        survey              Run multiple analytics over JSON data
+    > powershell
+    > $ConfirmPreference = 'Medium'
+    > Invoke-AtomicTest $T1117
 
 .. toctree::
    :maxdepth: 2
