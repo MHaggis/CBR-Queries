@@ -16,31 +16,41 @@ By default, it will download and Install Atomic Red Team to ``c:\AtomicRedTeam``
 Running the `Install script <https://github.com/redcanaryco/atomic-red-team/blob/master/execution-frameworks/Invoke-AtomicRedTeam/install-atomicredteam.ps1>`_ locally provides three parameters:
 
 InstallPath
-- Where ART is to be Installed
+* Where ART is to be Installed
 
-    ``Install-AtomicRedTeam.ps1 -InstallPath c:\tools\``
+.. code-block:: console
+
+    > Install-AtomicRedTeam.ps1 -InstallPath c:\tools\
 
 DownloadPath
-- Where ART is to be downloaded
+* Where ART is to be downloaded
 
-    ``Install-AtomicRedTeam.ps1 -DownloadPath c:\tools\``
+.. code-block:: console
+
+    > Install-AtomicRedTeam.ps1 -DownloadPath c:\tools\
 
 Verbose
-- Verbose output during Installation
+* Verbose output during Installation
 
-    ``Install-AtomicRedTeam.ps1 -verbose``
+.. code-block:: console
+
+
+    > Install-AtomicRedTeam.ps1 -verbose
 
 Manual Installation
 ___________________
 
-    ``set-executionpolicy Unrestricted``
+.. code-block:: console
 
-[PowerShell-Yaml](https://github.com/cloudbase/powershell-yaml) is required to parse Atomic yaml files:
+    > powershell
+    > set-executionpolicy Unrestricted
 
+`PowerShell-Yaml <https://github.com/cloudbase/powershell-yaml>`_ is required to parse Atomic yaml files:
 
-    ``Install-Module -Name powershell-yaml``
+.. code-block:: console
 
-    ``Import-Module .\Invoke-AtomicRedTeam.psm1``
+    > Install-Module -Name powershell-yaml
+    > Import-Module .\Invoke-AtomicRedTeam.psm1
 
 
 Generate Tests
