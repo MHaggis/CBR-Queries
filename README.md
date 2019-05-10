@@ -9,6 +9,10 @@
 
 Most recently added queries below.
 
+`is_executable_image_filewrite:true AND process_name:powershell.exe`
+
+`cmdline:--* AND netconn_count:[2 TO *] AND modload:"c:\windows\syswow64\bcrypt.dll" AND digsig_result:"Untrusted Root"`
+
 ###
 
 `process_name:winword.exe regmod:software\microsoft\windows\currentversion\run\* modload:vbe*.dll`
