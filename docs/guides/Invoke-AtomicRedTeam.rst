@@ -13,7 +13,7 @@ Get started with our simple Install script:
 
 By default, it will download and Install Atomic Red Team to ``c:\AtomicRedTeam``
 
-Running the [Install script](https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/execution-frameworks/Invoke-AtomicRedTeam/Install-AtomicRedTeam.ps1) locally provides three parameters:
+Running the `Install script <https://github.com/redcanaryco/atomic-red-team/blob/master/execution-frameworks/Invoke-AtomicRedTeam/install-atomicredteam.ps1>`_ locally provides three parameters:
 
 InstallPath
 - Where ART is to be Installed
