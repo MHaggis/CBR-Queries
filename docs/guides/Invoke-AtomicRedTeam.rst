@@ -41,7 +41,7 @@ Verbose
     > Install-AtomicRedTeam.ps1 -verbose
 
 Manual Installation
-___________________
+^^^^^^^^^
 
 .. code-block:: console
 
@@ -57,7 +57,7 @@ ___________________
 
 
 Generate Tests
-___________________
+^^^^^^^^^
 
 This process generates all Atomic tests and allows for easy copy and paste execution.
 Note: you may need to change the path.
@@ -68,7 +68,7 @@ Note: you may need to change the path.
     > Invoke-AllAtomicTests -GenerateOnly
 
 Execute All Tests
-___________________
+^^^^^^^^^
 
 Execute all Atomic tests:
 
@@ -158,5 +158,4 @@ Or you can set your `$ConfirmPreference` to 'Medium'
    :maxdepth: 2
    :caption: Contents
 
-   cli
-   sysmon
+   index
