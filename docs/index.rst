@@ -9,9 +9,9 @@ Atomic Red Team
 Resources
 ^^^^^^^^^
 
-- :doc:`Get started <guides/index>` with EQL on your own computer
+- :doc:`Get started <guides/index>` with Atomic Red Team
 - Explore the :doc:`analytics <analytics>` that map to ATT&CK.
-- Learn how to `write queries <https://eql.readthedocs.io/query-guide>`_ in EQL syntax
+- Learn how to `write Atomic Tests <https://eql.readthedocs.io/query-guide>`_ in yaml
 - Browse our :doc:`schemas <schemas>` and existing normalizations
 - Check the :doc:`license <licenses>` status
 

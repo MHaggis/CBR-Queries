@@ -2,6 +2,16 @@
 Getting Started
 ======================================
 
+Resources
+^^^^^^^^^
+
+- :doc:`Get started <guides/Invoke-AtomicRedTeam>` with PowerShell Invoke-AtomicRedTeam
+- Explore the :doc:`analytics <analytics>` that map to ATT&CK.
+
+
+Old
+^^^^^^^^^
+
 The EQL library current supports Python 2.7 and 3.5 - 3.7. Assuming a supported Python version is installed, run the command:
 
 .. code-block:: console

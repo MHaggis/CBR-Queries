@@ -9,6 +9,10 @@
 
 Most recently added queries below.
 
+`(regmod:"\registry\machine\software\microsoft\windows defender security center\notifications\disablenotifications")`
+
+`(regmod:"\registry\machine\software\policies\microsoft\windows defender\disableantispyware")`
+
 `is_executable_image_filewrite:true AND process_name:powershell.exe`
 
 `cmdline:--* AND netconn_count:[2 TO *] AND modload:"c:\windows\syswow64\bcrypt.dll" AND digsig_result:"Untrusted Root"`
