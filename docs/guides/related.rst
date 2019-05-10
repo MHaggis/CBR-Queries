@@ -6,6 +6,7 @@ Projects and resources related to Atomic Red Team
 
 * `Atomic Red Team Simple Parser <https://github.com/AlfredoAbarca/ARTSP>`_
 
+* `SCYTHE Goes Atomic <https://blog.grimm-co.com/post/scythe-goes-atomic/>`_
 
 .. toctree::
    :maxdepth: 2

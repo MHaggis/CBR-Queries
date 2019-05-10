@@ -10,8 +10,10 @@ Resources
 ^^^^^^^^^
 
 - :doc:`Get started <guides/index>` with Atomic Red Team
-- Explore the :doc:`analytics <analytics>` that map to ATT&CK.
-- Learn how to `write Atomic Tests <https://eql.readthedocs.io/query-guide>`_ in yaml
+- Explore :doc:`related <guides/related>` projects using Atomic Red Team
+- Learn how to `write Atomic Tests `_
+- Begin using the :doc:`PowerShell Invoke-AtomicRedTeam  <guides/invoke-atomicredteam>` framework
+
 - Browse our :doc:`schemas <schemas>` and existing normalizations
 - Check the :doc:`license <licenses>` status
 

@@ -10,11 +10,10 @@ We suggest a phased cyclical approach to running a test and evaluating your resu
 4. Develop Detection
 5. Measure Progress
 
-Additional resources:
-
+Resources
+^^^^^^^^^
 - :doc:`Get started <Invoke-AtomicRedTeam>` with PowerShell Invoke-AtomicRedTeam
 - Additional execution frameworks may be found on the `repo <https://github.com/redcanaryco/atomic-red-team/tree/master/execution-frameworks>`_
-- :doc:`Related <related>` tools or frameworks using Atomic Red Team
 
 Best Practices
 ^^^^^^^^^
