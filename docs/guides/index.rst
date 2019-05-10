@@ -5,7 +5,7 @@ Getting Started
 Resources
 ^^^^^^^^^
 
-- :doc:`Get started <invoke-atomicredteam>` with PowerShell Invoke-AtomicRedTeam
+- :doc:`Get started <Invoke-AtomicRedTeam>` with PowerShell Invoke-AtomicRedTeam
 - Explore the :doc:`analytics <analytics>` that map to ATT&CK.
 
 
