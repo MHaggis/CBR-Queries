@@ -2,11 +2,14 @@
 Getting Started
 ======================================
 
+
+
 Resources
 ^^^^^^^^^
 
 - :doc:`Get started <Invoke-AtomicRedTeam>` with PowerShell Invoke-AtomicRedTeam
-- Explore the :doc:`analytics <analytics>` that map to ATT&CK.
+- Additional execution frameworks may be found on the `repo <https://github.com/redcanaryco/atomic-red-team/tree/master/execution-frameworks>`_
+- :doc:`Related <related>` tools or frameworks using Atomic Red Team
 
 
 .. toctree::
