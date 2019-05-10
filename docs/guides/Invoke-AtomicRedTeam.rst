@@ -16,6 +16,7 @@ By default, it will download and Install Atomic Red Team to ``c:\AtomicRedTeam``
 Running the `Install script <https://github.com/redcanaryco/atomic-red-team/blob/master/execution-frameworks/Invoke-AtomicRedTeam/install-atomicredteam.ps1>`_ locally provides three parameters:
 
 InstallPath
+
 * Where ART is to be Installed
 
 .. code-block:: console
@@ -23,6 +24,7 @@ InstallPath
     > Install-AtomicRedTeam.ps1 -InstallPath c:\tools\
 
 DownloadPath
+
 * Where ART is to be downloaded
 
 .. code-block:: console
@@ -30,6 +32,7 @@ DownloadPath
     > Install-AtomicRedTeam.ps1 -DownloadPath c:\tools\
 
 Verbose
+
 * Verbose output during Installation
 
 .. code-block:: console
