@@ -10,6 +10,7 @@ Getting Started Testing with Atomic Tests
 ^^^^^^^^^
 
 We suggest a phased cyclical approach to running a test and evaluating your results:
+
 1. Select a test
 2. Execute Test
 3. Collect Evidence
@@ -39,7 +40,7 @@ Select one or more Atomic Tests that you plan to execute. A complete list, ATT&C
 Execute Test
 ^^^^^^^^^
 
-In this example we will use Technique T1117 `Regsvr32` and Atomic Test `Regsvr32 remote COM scriptlet execution`. This particular test is fairly easy to exercise since the tool is on all Windows workstations by default.
+In this example we will use Technique T1117 ``Regsvr32`` and Atomic Test ``Regsvr32 remote COM scriptlet execution``. This particular test is fairly easy to exercise since the tool is on all Windows workstations by default.
 
 The details of this test, which are located here, describe how you can test your detection by simply running the below command:
 
