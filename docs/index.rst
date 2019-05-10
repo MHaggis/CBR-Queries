@@ -11,8 +11,8 @@ Resources
 
 - :doc:`Get started <guides/index>` with Atomic Red Team
 - Explore :doc:`related <guides/related>` projects using Atomic Red Team
-- Learn how to `write Atomic Tests `_
-- Begin using the :doc:`PowerShell Invoke-AtomicRedTeam  <guides/invoke-atomicredteam>` framework
+- Learn how to `write Atomic Tests `
+- Begin using the :doc:`PowerShell Invoke-AtomicRedTeam  <guides/Invoke-AtomicRedTeam>` framework
 
 - Browse our :doc:`schemas <schemas>` and existing normalizations
 - Check the :doc:`license <licenses>` status
@@ -23,8 +23,7 @@ Resources
    :caption: Contents
 
    guides/index
-   guides/related
-   guides/invoke-atomicredteam
+   guides/Invoke-AtomicRedTeam
 
    matrices
    schemas
