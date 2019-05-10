@@ -2,82 +2,78 @@
 Invoke-AtomicRedTeam
 ======================================
 
-Getting Started
+Install Invoke-AtomicRedTeam
 ^^^^^^^^^
-
-# Invoke-AtomicRedTeam
-
-## Setup
-
-### Install Atomic Red Team
 
 Get started with our simple Install script:
 
-`powershell.exe "IEX (New-Object Net.WebClient).DownloadString('http://psInstall.AtomicRedTeam.com')"`
+``powershell.exe "IEX (New-Object Net.WebClient).DownloadString('http://psInstall.AtomicRedTeam.com')"``
 
 [Source](https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/execution-frameworks/Invoke-AtomicRedTeam/Install-AtomicRedTeam.ps1)
 
-By default, it will download and Install Atomic Red Team to `c:\AtomicRedTeam`
+By default, it will download and Install Atomic Red Team to ``c:\AtomicRedTeam``
 
 Running the [Install script](https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/execution-frameworks/Invoke-AtomicRedTeam/Install-AtomicRedTeam.ps1) locally provides three parameters:
 
 InstallPath
 - Where ART is to be Installed
 
-    `Install-AtomicRedTeam.ps1 -InstallPath c:\tools\`
+    ``Install-AtomicRedTeam.ps1 -InstallPath c:\tools\``
 
 DownloadPath
 - Where ART is to be downloaded
 
-    `Install-AtomicRedTeam.ps1 -DownloadPath c:\tools\`
+    ``Install-AtomicRedTeam.ps1 -DownloadPath c:\tools\``
 
 Verbose
 - Verbose output during Installation
 
-    `Install-AtomicRedTeam.ps1 -verbose`
+    ``Install-AtomicRedTeam.ps1 -verbose``
 
-### Manual
+Manual Installation
+___________________
 
-
-`set-executionpolicy Unrestricted`
+``set-executionpolicy Unrestricted``
 
 [PowerShell-Yaml](https://github.com/cloudbase/powershell-yaml) is required to parse Atomic yaml files:
 
 
-`Install-Module -Name powershell-yaml`
+``Install-Module -Name powershell-yaml``
 
-`Import-Module .\Invoke-AtomicRedTeam.psm1`
+```Import-Module .\Invoke-AtomicRedTeam.psm1``
 
-## Getting Started
 
-### Generate Tests
+Generate Tests
+___________________
 
 This process generates all Atomic tests and allows for easy copy and paste execution.
 Note: you may need to change the path.
 
-    Invoke-AllAtomicTests -GenerateOnly
+    ``Invoke-AllAtomicTests -GenerateOnly``
 
-#### Execute All Tests
+Execute All Tests
+___________________
 
 Execute all Atomic tests:
 
-    Invoke-AllAtomicTests
+    ``Invoke-AllAtomicTests``
 
-#### Execute All Tests - Specific Directory
+Execute All Tests - Specific Directory
+___________________
 
 Specify a path to atomics folder, example C:\AtomicRedTeam\atomics
 
-    Invoke-AllAtomicTests -path C:\AtomicRedTeam\atomics
+    ``Invoke-AllAtomicTests -path C:\AtomicRedTeam\atomics``
 
+Execute a Single Test
+___________________
 
-#### Execute a Single Test
-
-```powershell
+::powershell
 $T1117 = Get-AtomicTechnique -Path ..\..\atomics\T1117\T1117.yaml
 Invoke-AtomicTest $T1117
-```
 
-## Additional Examples
+Additional Examples
+___________________
 
 If you would like output when running tests using the following:
 
