@@ -48,10 +48,19 @@ Notice the usage of ``observed_filename`` - this is similar to defining ``path``
 Identify Suspicious Drivers
 ^^^^^^^^^
 
+Hunting for Suspicious Drivers is extremely rewarding, but I would be lying if it wasn't one of the hardest types of hunts to perform.
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents
+All queries may be found `here <https://github.com/MHaggis/CBR-Queries/blob/master/binary.md>`_
 
-   cli
-   sysmon
+Binary
+_______
+
+To begin, I recommend starting with ``digsig_status`` on files in ``observed_filename:c:\windows\system32\drivers\`` -
+
+.. code-block:: console
+
+    >   observed_filename:c:\windows\system32\drivers\   digsig_result:"Bad Signature"  digsig_result:"Invalid Signature"  digsig_result:"Invalid Chain"  digsig_result:"Untrusted Root"  digsig_result:"Explicit Distrust"
+
+Instead of copy/paste the query, I paste this in the URL bar:
+
+``/#/binaries/cb.urlver=1&q=observed_filename%3Ac%3A%5Cwindows%5Csystem32%5Cdrivers%5C&cb.q.digsig_result=(digsig_result%3A"Bad%20Signature"%20or%20digsig_result%3A"Invalid%20Signature"%20or%20digsig_result%3A"Invalid%20Chain"%20or%20digsig_result%3A"Untrusted%20Root"%20or%20digsig_result%3A"Explicit%20Distrust")&rows=10&start=0&sort=server_added_timestamp%20desc``
