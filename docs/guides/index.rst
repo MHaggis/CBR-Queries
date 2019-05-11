@@ -6,7 +6,7 @@ Data analysis is a cyclical process. I recommend following a similar process:
 
 .. image:: https://redcanary.com/wp-content/uploads/ProcessFlow.png
 
-`reference blog post <https://redcanary.com/blog/carbon-black-response-with-splunk-advanced-data-analysis/>`
+`reference blog post <https://redcanary.com/blog/carbon-black-response-with-splunk-advanced-data-analysis/>`_
 
 1. Decide what to look for (hypothesis, situational awareness)
 2. Tune, focus query, Alert
