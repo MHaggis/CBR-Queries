@@ -86,7 +86,7 @@ Some added bonus material, I like to also track ``.sys`` files. Sometimes malici
 Easy, right?
 
 The first two queries identify any sys files in either ``system32`` or ``syswow64``. Begin to also tune your ``digsig_result`` to identify anything odd laying around.
-The final query of the 3 highlighted is looking for signing time of the signature (cert). It's an easy way to identify malicious drivers loading with stolen certs from years past. Perhaps, a driver that has been dormant for a long period of time. 
+The final query of the 3 highlighted is looking for signing time of the signature (cert). It's an easy way to identify malicious drivers loading with stolen certs from years past. Perhaps, a driver that has been dormant for a long period of time.
 
 Process
 _______
@@ -101,3 +101,9 @@ When an endpoint is exploited either via SMB or IPC, the process chain will begi
 
 Tune this how you like by changing the process name or digsig result. This assists with identifying any suspicious module loads by critical processes on Windows.
 If you find a malicious module load via this method, it's highly possible this is a later stage of persistence from the initial delivery. Definitely go back and review all data for the affected endpoint.
+
+.. code-block:: console
+
+    > process_name:spoolsv.exe -digsig_result_modload:Signed
+
+Similar to above. This is another way to look for a process loading everything except a signed module.
