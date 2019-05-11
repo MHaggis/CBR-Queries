@@ -65,11 +65,11 @@ Instead of copy/paste the query, I paste this in the URL bar:
 
 ``/#/binaries/cb.urlver=1&q=observed_filename%3Ac%3A%5Cwindows%5Csystem32%5Cdrivers%5C&cb.q.digsig_result=(digsig_result%3A"Bad%20Signature"%20or%20digsig_result%3A"Invalid%20Signature"%20or%20digsig_result%3A"Invalid%20Chain"%20or%20digsig_result%3A"Untrusted%20Root"%20or%20digsig_result%3A"Explicit%20Distrust")&rows=10&start=0&sort=server_added_timestamp%20desc``
 
-I left out ``digsig_result:"Expired" as it gets noisy. Once reviewing the other 5, I add Expired and review the data.
+I left out ``digsig_result:"Expired"`` as it gets noisy. Once reviewing the other 5, I add Expired and review the data.
 
 This process can take time as drivers either look normal or evil. Upon identifying a suspicious driver, open it up in a new tab, review it, look it up on VT (Google, etc) for any sourcing. If it's legit, move on.
 
-Once I review what is in ``\drivers\``, I change the query to show me all binaries with differnet digsig_result:
+Once I review what is in ``\drivers\``, I change the query to show me all binaries with different digsig_result:
 
 .. code-block:: console
 
@@ -86,6 +86,7 @@ Some added bonus material, I like to also track ``.sys`` files. Sometimes malici
 Easy, right?
 
 The first two queries identify any sys files in either ``system32`` or ``syswow64``. Begin to also tune your ``digsig_result`` to identify anything odd laying around.
+The final query of the 3 highlighted is looking for signing time of the signature (cert). It's an easy way to identify malicious drivers loading with stolen certs from years past. Perhaps, a driver that has been dormant for a long period of time. 
 
 Process
 _______
@@ -98,4 +99,5 @@ When an endpoint is exploited either via SMB or IPC, the process chain will begi
 
     > process_name:ntoskrnl.exe (digsig_result_modload:"Unsigned" OR digsig_result_modload:"Explicit\ Distrust")
 
-Tune this how you like by changing the process name or digsig result. This assists with identifying any suspicious module loads by critical processes on Windows. 
+Tune this how you like by changing the process name or digsig result. This assists with identifying any suspicious module loads by critical processes on Windows.
+If you find a malicious module load via this method, it's highly possible this is a later stage of persistence from the initial delivery. Definitely go back and review all data for the affected endpoint.
