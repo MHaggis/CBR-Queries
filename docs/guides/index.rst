@@ -55,7 +55,7 @@ All queries may be found `here <https://github.com/MHaggis/CBR-Queries/blob/mast
 Binary
 _______
 
-To begin, I recommend starting with ``digsig_status`` on files in ``observed_filename:c:\windows\system32\drivers\`` -
+To begin, I recommend starting with ``digsig_result`` on files in ``observed_filename:c:\windows\system32\drivers\`` -
 
 .. code-block:: console
 
@@ -64,3 +64,38 @@ To begin, I recommend starting with ``digsig_status`` on files in ``observed_fil
 Instead of copy/paste the query, I paste this in the URL bar:
 
 ``/#/binaries/cb.urlver=1&q=observed_filename%3Ac%3A%5Cwindows%5Csystem32%5Cdrivers%5C&cb.q.digsig_result=(digsig_result%3A"Bad%20Signature"%20or%20digsig_result%3A"Invalid%20Signature"%20or%20digsig_result%3A"Invalid%20Chain"%20or%20digsig_result%3A"Untrusted%20Root"%20or%20digsig_result%3A"Explicit%20Distrust")&rows=10&start=0&sort=server_added_timestamp%20desc``
+
+I left out ``digsig_result:"Expired" as it gets noisy. Once reviewing the other 5, I add Expired and review the data.
+
+This process can take time as drivers either look normal or evil. Upon identifying a suspicious driver, open it up in a new tab, review it, look it up on VT (Google, etc) for any sourcing. If it's legit, move on.
+
+Once I review what is in ``\drivers\``, I change the query to show me all binaries with differnet digsig_result:
+
+.. code-block:: console
+
+    > digsig_result:"Bad Signature"  digsig_result:"Invalid Signature"  digsig_result:"Invalid Chain"  digsig_result:"Untrusted Root"  digsig_result:"Explicit Distrust" digsig_result:"Expired"
+
+Some added bonus material, I like to also track ``.sys`` files. Sometimes malicious software will drop it as a ``.sys`` file to bypass detection, or they actual wrote a kernel mode driver.
+
+.. code-block:: console
+
+    > (observed_filename:"c:\windows\system32\" OR observed_filename:"c:\windows\syswow64\") .sys
+    > (observed_filename:“c:\windows\syswow64\drivers”) .sys
+    > (observed_filename:"c:\windows\system32\drivers\") .sys digsig_sign_time:[* TO 2015-10-01T23:59:59]
+
+Easy, right?
+
+The first two queries identify any sys files in either ``system32`` or ``syswow64``. Begin to also tune your ``digsig_result`` to identify anything odd laying around.
+
+Process
+_______
+
+The reason I start with Binary is because it can't lie. What executes, is collected. Now, let's take a peek on the process side.
+
+When an endpoint is exploited either via SMB or IPC, the process chain will begin with ``ntoskrnl.exe``, ``svchost.exe``, or ``lsass.exe``.
+
+.. code-block:: console
+
+    > process_name:ntoskrnl.exe (digsig_result_modload:"Unsigned" OR digsig_result_modload:"Explicit\ Distrust")
+
+Tune this how you like by changing the process name or digsig result. This assists with identifying any suspicious module loads by critical processes on Windows. 
