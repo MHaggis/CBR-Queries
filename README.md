@@ -5,7 +5,7 @@
 * [malware](emotet.md)
 * [mimikatz](mimikatz.md)
 * [helpers](helpers.md)
-* [Certificates](Certs.md)
+* [Certificates](certs.md)
 
 Most recently added queries below.
 
