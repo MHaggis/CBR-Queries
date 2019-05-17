@@ -11,8 +11,9 @@ Most recently added queries below.
 
 Eternalblue-Doublepulsar-Metasploit
 
-[reference](https://github.com/ElevenPaths/Eternalblue-Doublepulsar-Metasploit/tree/master/deps)
-[reference](https://gist.github.com/misterch0c/08829bc65b208609d455a9f4aeaa2a6c)
+- [reference](https://github.com/ElevenPaths/Eternalblue-Doublepulsar-Metasploit/tree/master/deps)
+- [reference](https://gist.github.com/misterch0c/08829bc65b208609d455a9f4aeaa2a6c)
+
 filemod:
 ```
 etebcore-2.x86.dll  
