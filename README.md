@@ -9,6 +9,31 @@
 
 Most recently added queries below.
 
+Eternalblue-Doublepulsar-Metasploit
+
+[reference](https://github.com/ElevenPaths/Eternalblue-Doublepulsar-Metasploit/tree/master/deps)
+[reference](https://gist.github.com/misterch0c/08829bc65b208609d455a9f4aeaa2a6c)
+
+modload:
+```
+trch-1.dll
+libxml2.dll
+tucl-1.dll
+coli-0.dll
+exma-1.dll
+tibe-2.dll
+cnli-1.dll
+xdvl-0.dll
+crli-0.dll
+ssleay32.dll
+libeay32.dll
+trfo-2.dll
+posh-0.dll
+ucl.dll
+zlib1.dll
+```
+_______
+
 `(regmod:"\registry\machine\software\microsoft\windows defender security center\notifications\disablenotifications")`
 
 `(regmod:"\registry\machine\software\policies\microsoft\windows defender\disableantispyware")`
