@@ -23,3 +23,11 @@ https://acmccs.github.io/papers/p1435-kimA.pdf
 `digsig_issuer:"WoTrus Code Signing CA"`
 
 `digsig_issuer:"DigiCert EV Code Signing CA"`
+
+`digsig_issuer:WEXTSLGLZVJPTNNHZG`
+
+`digsig_issuer:BNNMZZPTPXHZOIVJJV`
+
+`digsig_issuer:PDMPEGXSJGYPPMYBYO`
+
+`digsig_issuer:XFAJAAJUQJATWBWBZP`

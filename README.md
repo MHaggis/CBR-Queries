@@ -9,7 +9,16 @@
 
 Most recently added queries below.
 
-Eternalblue-Doublepulsar-Metasploit
+## Check Yo RDP
+
+`-file_version:6.1.7601.24441 observed_filename:termdd.sys`
+
+## Conhost
+
+`childproc_name:conhost.exe`
+
+
+## Eternalblue-Doublepulsar-Metasploit
 
 - [reference](https://github.com/ElevenPaths/Eternalblue-Doublepulsar-Metasploit/tree/master/deps)
 - [reference](https://gist.github.com/misterch0c/08829bc65b208609d455a9f4aeaa2a6c)
