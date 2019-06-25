@@ -18,6 +18,8 @@ https://acmccs.github.io/papers/p1435-kimA.pdf
 
 `digsig_issuer:"Thawte Code Signing CA - G2"`
 
+`digsig_issuer:"thawte SHA256 Code Signing CA"`
+
 `digsig_issuer:"WoTrus Code Signing CA"`
 
 `digsig_issuer:"DigiCert EV Code Signing CA"`
