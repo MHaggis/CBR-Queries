@@ -2,6 +2,14 @@
 
 Not 100% these are emotet. It's highly possible Ryuk, Qakbot and Trickbot are mixed in here.
 
+### Trickbot
+
+`(ipport:447 OR ipport:449) process_name:svchost.exe filemod:injectdll64_configs*`
+
+`filemod: c:\windows\temp\*.bat`
+
+Catches all the BAT's being written to \temp
+
 ### OrangeWorm
 
 `process_name:rundll32.exe cmdline:ControlTrace AND childproc_count:[2 TO *] AND regmod_count:[1 TO *]`

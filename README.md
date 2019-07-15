@@ -9,6 +9,14 @@
 
 Most recently added queries below.
 
+`internal_name:wscript.exe -process_name:wscript.exe`
+
+`parent_name:taskeng.exe internal_name:wscript.exe -process_name:wscript.exe`
+
+`path:AppData\Roaming\*`
+
+`internal_name:schtasks.exe -process_name:schtasks.exe`
+
 ## Check Yo RDP
 
 `-file_version:6.1.7601.24441 observed_filename:termdd.sys`
