@@ -9,6 +9,47 @@
 
 Most recently added queries below.
 
+## Things
+
+`process_name:rundll32.exe (modload:scrobj.dll OR modload:clr.dll)`
+
+`process_name:rundll32.exe (modload:scrobj.dll OR modload:clr.dll) -username:SYSTEM cmdline:advpack.dll`
+
+`process_name:rundll32.exe (modload:scrobj.dll OR modload:clr.dll)  cmdline:ieadvpack.dll`
+
+`process_name:rundll32.exe (modload:scrobj.dll OR modload:clr.dll)  cmdline:syssetup.dll`
+
+`process_name:cscript.exe (modload:scrobj.dll AND modload:clr.dll)`
+
+`parent_name:cmd.exe process_name:installutil.exe modload:clr.dll -username:SYSTEM`
+
+`process_name:installutil.exe modload:clr.dll -username:SYSTEM -cmdline:realtek`
+
+`parent_name:cmd.exe process_name:installutil.exe modload:clr.dll`
+
+`process_name:installutil.exe modload:clr.dll -username:SYSTEM cmdline:.dll`
+
+`process_name:installutil.exe cmdline:.dll -username:SYSTEM`
+
+
+## stuff
+
+`process_name:excel.exe|winword.exe|powerpnt.exe (cmdline:.dll OR cmdline:.exe)`
+
+`process_name:control.exe`
+
+`process_name:winword.exe cmdline:http:\`
+
+`parent_name:winword.exe process_name:rundll32.exe netconn_count:[1 TO *]`
+
+`"C:\Windows\system32\rundll32.exe" Shell32.dll,Control_RunDLL c:\users\public\test2.dll`
+
+
+`modload:mscor* AND modload:clr.dll AND -process_name:mscorsvw.exe AND path:c:\users* AND modload:samlib.dll`
+
+
+## wscript stuff
+
 `internal_name:wscript.exe -process_name:wscript.exe`
 
 `parent_name:taskeng.exe internal_name:wscript.exe -process_name:wscript.exe`
