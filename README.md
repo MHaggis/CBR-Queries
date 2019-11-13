@@ -11,6 +11,8 @@ Most recently added queries below.
 
 ## Things
 
+ `process_name:rundll32.exe modload:amsi.dll`
+
 `process_name:rundll32.exe (modload:scrobj.dll OR modload:clr.dll)`
 
 `process_name:rundll32.exe (modload:scrobj.dll OR modload:clr.dll) -username:SYSTEM cmdline:advpack.dll`
