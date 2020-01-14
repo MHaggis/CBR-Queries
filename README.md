@@ -9,6 +9,18 @@
 
 Most recently added queries below.
 
+## New stuff
+
+`process_name:msbuild.exe digsig_result_modload:Unsigned parent_name:cmd.exe`
+
+`process_name:msbuild.exe crossproc_name:notepad.exe`
+
+`process_name:msbuild.exe (parent_name:powershell.exe OR parent_name:cmd.exe)`
+
+`process_name:msbuild.exe AND crossproc_type:"remotethread"`
+
+
+
 ## Things
 
  `process_name:rundll32.exe modload:amsi.dll`
