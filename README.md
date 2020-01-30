@@ -2,23 +2,13 @@
 
 * [Binary](binary.md)
 * [Process](process.md)
+* [MsBuild](msbuild.md)
 * [malware](emotet.md)
 * [mimikatz](mimikatz.md)
 * [helpers](helpers.md)
 * [Certificates](certs.md)
 
 Most recently added queries below.
-
-## New stuff
-
-`process_name:msbuild.exe digsig_result_modload:Unsigned parent_name:cmd.exe`
-
-`process_name:msbuild.exe crossproc_name:notepad.exe`
-
-`process_name:msbuild.exe (parent_name:powershell.exe OR parent_name:cmd.exe)`
-
-`process_name:msbuild.exe AND crossproc_type:"remotethread"`
-
 
 
 ## Things
