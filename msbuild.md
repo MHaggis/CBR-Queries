@@ -5,6 +5,7 @@ This is a collection of detection techniques and information for blue teams on h
 All queries are in CarbonBlack Response, but are easily converted to Sysmon or other EDR products by matching fields.
 
 Netconn or remote retrieval:
+
 `process_name:msbuild.exe (cmdline:http OR cmdline:https)`
 
 `process_name:msbuild.exe netconn_count:[1 TO *]`
@@ -16,9 +17,11 @@ Spawning off something:
 `parent_name:mshta.exe process_name:msbuild.exe`
 
 MsBuild spawning directly off Explorer is highly suspect:
+
 `parent_name:explorer.exe process_name:msbuild.exe`
 
 Inline tasks:
+
 `process_name:msbuild.exe (modload:microsoft.build.tasks.v4.0.dll OR modload:microsoft.build.tasks.v4.0.ni.dll)`
 
 `process_name:msbuild.exe digsig_result_modload:Unsigned parent_name:cmd.exe`
@@ -26,9 +29,11 @@ Inline tasks:
 `process_name:msbuild.exe crossproc_name:notepad.exe`
 
 Interactive use of MsBuild:
+
 `process_name:msbuild.exe (parent_name:powershell.exe OR parent_name:cmd.exe)`
 
 Injecting into something:
+
 `process_name:msbuild.exe AND crossproc_type:"remotethread"`
 
 
