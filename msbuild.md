@@ -37,6 +37,11 @@ Injecting into something:
 `process_name:msbuild.exe AND crossproc_type:"remotethread"`
 
 
+Credential Theft:
+
+`process_name:msbuild.exe (modload:vaultcli.dll AND modload:samlib.dll)`
+
+
 ## Normal / Not Normal
 
 A key point about MsBuild is how it looks from the use of a developer compared to an adversary.
