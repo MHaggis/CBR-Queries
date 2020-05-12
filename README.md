@@ -11,6 +11,15 @@
 Most recently added queries below.
 
 
+## Interesting behaviors
+
+`process_name:whoami.exe crossproc_name:wmiprvse.exe`
+
+`parent_name:explorer.exe process_name:whoami.exe`
+
+`parent_name:explorer.exe process_name:whoami.exe crossproc_name:wmiprvse.exe`
+
+
 ## Things
 
  `process_name:rundll32.exe modload:amsi.dll`
