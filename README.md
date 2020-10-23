@@ -11,6 +11,13 @@
 Most recently added queries below.
 
 
+## Domain Fronts
+
+`domain:azurewebsites.net OR domain:appspot.com OR domain:amazonaws.com OR domain:windows.net OR domain:cloudfront.net OR domain:akamai.net OR domain:akamaiedge.net OR domain:kunlungr.com`
+
+From [Here](https://i.blackhat.com/USA-19/Wednesday/us-19-Landers-Flying-A-False-Flag-Advanced-C2-Trust-Conflicts-And-Domain-Takeover.pdf)
+
+
 ## Interesting behaviors
 
 `process_name:whoami.exe crossproc_name:wmiprvse.exe`
